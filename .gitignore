@@ -2,3 +2,6 @@
 *.pyo
 *.swo
 *.swp
+*.aux
+*.log
+*.out
