@@ -1,7 +1,13 @@
+# python
 *.pyc
 *.pyo
+
+# vim
 *.swo
 *.swp
+.ropeproject
+
+# tex
 *.aux
 *.log
 *.out
