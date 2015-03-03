@@ -1,5 +1,14 @@
 \ProvidesFile{helpers}
     \newcommand{\abs}[1]{\left\vert #1 \right\vert}
+	\newcommand{\plot}[2]{
+		\begin{figure}[h!]
+			\begin{center}
+				\includegraphics[width=0.8\textwidth]{plots/#1.pdf}
+			\end{center}
+			\caption{#2}
+			\label{fig:#1}
+		\end{figure}
+	}
     \newcommand{\NN}{\ensuremath{\mathbb{N}}}
     \newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
     \newcommand{\RR}{\ensuremath{\mathbb{R}}}

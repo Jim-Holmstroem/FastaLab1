@@ -1,8 +1,13 @@
+NAME=doc
+
 build:
-	pdflatex doc.tex
+	pdflatex ${NAME}.tex
+
+run:
+	evince ${NAME}.pdf
 
 clean:
-	rm -rf doc.aux doc.log doc.out doc.pdf
+	rm -rf ${NAME}.aux ${NAME}.log ${NAME}.out ${NAME}.pdf
 
 requirements:
 	apt-get install texlive-latex-extra texlive-fonts-recommended
