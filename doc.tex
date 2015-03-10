@@ -52,14 +52,22 @@ We can describe the reflection of an X-ray beam by treating it as specular (mirr
     \label{eq:braggs}
     2 \cdot d(hkl) \cdot sin( \theta ) = \lambda
 \end{equation}
-$d(hkl)$ is the distance between parallel lattice planes of the configuration $(hkl)$ characterizing the reciprocal lattice vector $\bold{G}=\frac{2\pi}{a}(h,k,l)$, where $a$ is the lattice constant. $d(hkl)$ can be shown to be equal to $\frac{2\pi}{\abs{\bold{G}}} = \frac{2\pi}{a}\sqrt{h^2+k^2+l^2}$. In this laboratory we use a $\beta-2\beta$ scan, also known as coupled mode. The incident beam hits the sample at an angle $\beta$, which is the same as the angle of the reflecting beam. This is done by rotating the sample to an angle $\beta$ and subsecuently moving the detector to an angle of $2\beta$, as shown in figure 1.
+
+$d(hkl)$ is the distance between parallel lattice planes of the configuration $(hkl)$
+characterizing the reciprocal lattice vector $\bold{G}=\frac{2\pi}{a}(h,k,l)$, where $a$ is the lattice constant.
+$d(hkl)$ can be shown to be equal to $\frac{2\pi}{\abs{\bold{G}}} = \frac{2\pi}{a}\sqrt{h^2+k^2+l^2}$.
+In this laboratory we use a $\beta-2\beta$ scan, also known as coupled mode.
+The incident beam hits the sample at an angle $\beta$, which is the same as the angle of the reflecting beam.
+This is done by rotating the sample to an angle $\beta$ and subsequently moving the detector to an angle of $2\beta$, as shown in figure 1.
 
 \image{uppstallning}{The $\beta-2\beta$ scan setup and visualization of corresponding wave vector in reciprocal space}
+The scattering vector $\bold{q}$ equals to the difference between the outgoing and incoming wavevectors,
+$\bold{k}' - \bold{k}$. By equation (20) in chapter 2 from \cite{Kittel} the scattering
+amplitude $F$ is given by
 \begin{equation}
     \label{eq:scatamp}
-    "Eq 20 in the book"
+    F = \sum_\bold{G} \int dV n_{\bold{G}} e^{i(\bold{G}-\bold{q})\cdot r}
 \end{equation}
-The scattering vector $\bold{q}$ equals to the difference between the outgoing and incoming wavevectors, $\bold{k}' - \bold{k}$. The scattering amplitude $F$ can be calculated as
 
 When the scattering vector equals a particular reciprocal lattice vector, $\bold{q} = \bold{G}$, the intensity of the reflection will peak in the diffractogram. 
 
@@ -183,12 +191,12 @@ From \eqref{braggs} our diffraction maxima occurs when
 \end{equation}
 Inputting the measured peak angles gives the following values for $\lambda$:
 
-
+By Bragg's beard!
 
 \section{Conclusion}
 
 \begin{thebibliography}{1}
-    \bibitem{solidstatephysics}
+    \bibitem{Kittel}
         Charles Kittel,
         {\em Introduction to Solid State Physics 8th Edition},
         2005.
