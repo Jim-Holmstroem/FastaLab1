@@ -47,7 +47,7 @@ Secondly, for four samples, labled A, B, C and D, determine either the material 
 
 \section{Experiment procedure}
 \subsection{$\boldsymbol{\beta}\boldsymbol{-}\boldsymbol{2}\boldsymbol{\beta}$ scan}
-We can describe the reflection of an X-ray beam by treating it as specular (mirrorlike) and assuming elastic scattering. From these premises we can find Bragg's law:
+We can describe the reflection of an X-ray beam by treating it as specular (mirrorlike) and assuming elastic scattering. From these premises we can find Bragg's law
 \begin{equation}
     \label{eq:braggs}
     2 \cdot d(hkl) \cdot sin( \theta ) = \lambda
@@ -55,12 +55,17 @@ We can describe the reflection of an X-ray beam by treating it as specular (mirr
 $d(hkl)$ is the distance between parallel lattice planes of the configuration $(hkl)$. In this laboratory we use a $\beta-2\beta$ scan, also known as coupled mode. The incident beam hits the sample at an angle $\beta$, which is the same as the angle of the reflecting beam. This is done by rotating the sample to an angle $\beta$ and subsecuently moving the detector to an angle of $2\beta$, as shown in figure 1.
 
 \image{uppstallning}{The $\beta-2\beta$ scan setup and visualization of corresponding wave vector in reciprocal space}
+\begin{equation}
+    \label{eq:scatamp}
+    "Eq 20 in the book"
+\end{equation}
+The scattering vector $\bold{q}$ equals to the difference between the outgoing and incoming wavevectors, $\bold{k}' - \bold{k}$. The scattering amplitude $F$ can be calculated as
 
-
-The scattering vector $\overline{q}$ equals to the difference between the outgoing and incoming wavevectors, $\overline{k}' - \overline{k}$. When the scattering vector equals a particular reciprocal lattice vector, $\overline{q} = \overline{G}$, the intensity of the reflection will peak in the diffractogram. 
+When the scattering vector equals a particular reciprocal lattice vector, $\bold{q} = \bold{G}$, the intensity of the reflection will peak in the diffractogram. 
 
 
 \subsection{Structure factors}
+The second condition for a diffraction peak to appear is that the structure factor must be nonzero.
 The structure factor $S_{\bold{G}}$ of a crystal structure can be calculated as below. Here $n$ is the number of atoms in the basic lattice, and atom $j$ is at position $\bold{r}_j$ with atomic form factor $f_j$. The atomic form factors are approximately equal to the atomic number.\\
 \begin{equation}
     S_{\bold{G}} = \sum^n_{j=1} f_j e^{-i \left( \bold{r}_j \cdot \bold{G}\right)}
@@ -103,10 +108,9 @@ The structure factor becomes
     = \left( f_\alpha + f_\beta e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}
 \end{equation}
 
-\subsubsection{(h,k,l)-triples allowed by the structure factors}
 The atomic form factors are $f_{Ga}=31$, $f_{As}=33$, $f_{In}=49$ and $f_{P}=15$.
 The structure factor for InP is only zero if and only if the fcc structure factor is zero.
-The same goes for GaAs, except when $h+k+l\equiv_4 2$ (same case as for Si) the structure factor becomes small which might affect the diffraction peaks.
+The same goes for GaAs, except when $h+k+l\equiv_4 2$ the structure factor becomes small which might affect the diffraction peaks.
 
 \section{Measurements results}
 \plot{A}{Description A}
