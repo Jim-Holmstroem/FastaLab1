@@ -52,7 +52,7 @@ We can describe the reflection of an X-ray beam by treating it as specular (mirr
     \label{eq:braggs}
     2 \cdot d(hkl) \cdot sin( \theta ) = \lambda
 \end{equation}
-$d(hkl)$ is the distance between parallel lattice planes of the configuration $(hkl)$ characterizing the incident light beam wave vector $\bold{G}=\frac{2\pi}{a}(h,k,l)$, where $a$ is the lattice constant. $d(hkl)$ can be shown to be equal to $\frac{2\pi}{|\bold{G}|} = \frac{2\pi}{a}\sqrt{h^2+k^2+l^2}$. In this laboratory we use a $\beta-2\beta$ scan, also known as coupled mode. The incident beam hits the sample at an angle $\beta$, which is the same as the angle of the reflecting beam. This is done by rotating the sample to an angle $\beta$ and subsecuently moving the detector to an angle of $2\beta$, as shown in figure 1.
+$d(hkl)$ is the distance between parallel lattice planes of the configuration $(hkl)$ characterizing the reciprocal lattice vector $\bold{G}=\frac{2\pi}{a}(h,k,l)$, where $a$ is the lattice constant. $d(hkl)$ can be shown to be equal to $\frac{2\pi}{\abs{\bold{G}}} = \frac{2\pi}{a}\sqrt{h^2+k^2+l^2}$. In this laboratory we use a $\beta-2\beta$ scan, also known as coupled mode. The incident beam hits the sample at an angle $\beta$, which is the same as the angle of the reflecting beam. This is done by rotating the sample to an angle $\beta$ and subsecuently moving the detector to an angle of $2\beta$, as shown in figure 1.
 
 \image{uppstallning}{The $\beta-2\beta$ scan setup and visualization of corresponding wave vector in reciprocal space}
 \begin{equation}
@@ -75,7 +75,7 @@ Say $\bold{G} = \frac{2\pi}{a}\left( h,k,l \right)$. The structure factor of an 
 \begin{equation}
     S^{fcc}_{\bold{G}} = f\cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\right]
 \end{equation}
-The fcc structure factor is 0 if and only if $h$, $k$ and $l$ are all even or all odd.\\
+The fcc structure factor is nonzero if and only if $h$, $k$ and $l$ are all even or all odd.\\
 
 \subsubsection{NaCl}
 The two atoms in the conventional cell of NaCl, one Na and one Cl, are each in an fcc structure.
@@ -171,8 +171,19 @@ The same goes for GaAs, except when $h+k+l\equiv_4 2$ the structure factor becom
 \end{tabular}
 
 \section{Discussion of the results}
+\subsection{Finding the X-ray wavelength from the NaCl diffraction pattern}
+The crystal surface is cut parallel to the (1,0,0) lattice plane.
+In coupled mode the $hkl$-vectors will be integer multiples of this Miller index.
+$\bold{G}=\frac{2\pi}{a}(n,0,0)$ where $n$ is an integer.
+The structure factor for NaCl is nonzero when $h,k,l$ are all even or all odd.
+This happens when $n$ is even.
+From \eqref{braggs} our diffraction maxima occurs when
+\begin{equation}
+\frac{2a}{n}sin\theta=\lambda\nonumber
+\end{equation}
+Inputting the measured peak angles gives the following values for $\lambda$:
 
-By Bragg's beard!
+
 
 \section{Conclusion}
 
