@@ -17,6 +17,8 @@ linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 
+\usepackage{gensymb}
+
 \usepackage{authblk}
 
 \usepackage{helpers}
@@ -36,52 +38,116 @@ linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
 \thispagestyle{empty}
 
 \section{Introduction}
-The standard method for caracterization of any material's crystaline structure is X-ray diffraction, also known as XRD. By studying how the X-rays reflects from the crystaline material, one can get an understanding of the material's properties and structure.
+The standard method for characterization of any material's crystalline structure is X-ray diffraction, also known as XRD.
+By studying how the X-rays reflects from the crystalline material, one can get an understanding of the material's properties and structure.
 
-In this laboratory we are faced with two main tasks. Firstly, to compute the wavelength ($\lambda$) of the X-rays, by measuring the diffraction behavior of NaCl and comparing it to our theoretically calculated values. Secondly, for four samples, labled A, B, C and D, determine either the material in question or the orientation of the crystal plane of said material.
+In this laboratory we are faced with two main tasks.
+Firstly, to compute the wavelength ($\lambda$) of the X-rays, by measuring the diffraction behavior of NaCl and comparing it to our theoretically calculated values.
+Secondly, for four samples, labled A, B, C and D, determine either the material in question or the orientation of the crystal plane of said material.
 
 \section{Experiment procedure}
 \subsection{$\beta-2\beta$ scan}
 
 \subsection{Structure factors}
-The structure factor $S_{\bold{G}}$ of a crystal structure is calculated as below. $n$ is the number of atoms in the basic lattice, and atom $j$ is at position $\bold{r}_j$ with atomic form factor $f_j$. The atomic form factors are approximately equal to the atomic number.\\
-\begin{align}
-S_{\bold{G}} &= \sum^n_{j=1} f_j e^{-i \left( \bold{r}_j \cdot \bold{G}\right)}
-\end{align}
+The structure factor $S_{\bold{G}}$ of a crystal structure can be calculated as below. Here $n$ is the number of atoms in the basic lattice, and atom $j$ is at position $\bold{r}_j$ with atomic form factor $f_j$. The atomic form factors are approximately equal to the atomic number.\\
+\begin{equation}
+    S_{\bold{G}} = \sum^n_{j=1} f_j e^{-i \left( \bold{r}_j \cdot \bold{G}\right)}
+\end{equation}
 
-Say $\bold{G} = \frac{2\pi}{a}\left( h,k,l \right)$. The structure factor of an fcc lattice with lattice constant $a$ is 
-\begin{align}
-S^{fcc}_{\bold{G}} &= f\cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\right]
-\end{align}
+Say $\bold{G} = \frac{2\pi}{a}\left( h,k,l \right)$. The structure factor of an fcc lattice with lattice constant $a$ is
+\begin{equation}
+    S^{fcc}_{\bold{G}} = f\cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\right]
+\end{equation}
 The fcc structure factor is 0 if and only if $h$, $k$ and $l$ are all even or all odd.\\
 
 \subsubsection{NaCl}
-The two atoms in the conventional cell of NaCl, one Na and one Cl, are each in an fcc structure. Putting an Na at the origin, the Cl structure will be displaced by $\frac{a}{2}\bold{e}_x$. The structure factor sums can then be expressed using the fcc structure factor above as
+The two atoms in the conventional cell of NaCl, one Na and one Cl, are each in an fcc structure.
+Putting an Na at the origin, the Cl structure will be displaced by $\frac{a}{2}\bold{e}_x$.
+The structure factor sums can then be expressed using the fcc structure factor above as
 \begin{align}
-S^{NaCl}_{\bold{G}} &= \left( f_{Na} + f_{Cl}e^{2\pi i\cdot \frac{h}{2}} \right) \cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\right]\nonumber\\
-&= \left( f_{Na} + f_{Cl}(-1)^{h} \right) \cdot S^{fcc}_{\bold{G}}
+    S^{NaCl}_{\bold{G}}
+    &= \left( f_{Na} + f_{Cl}e^{2\pi i\cdot \frac{h}{2}} \right) \cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\right]\nonumber\\
+    &= \left( f_{Na} + f_{Cl}(-1)^{h} \right) \cdot S^{fcc}_{\bold{G}}
 \end{align}\label{naclstructure}
 With $f_{Na}=11$ and $f_{Cl}=17$ the structure factor will only be $0$ when the fcc part is $0$.
 \subsubsection{Si}
-Silicon is monoatomic with two atoms in the conventional cell, at $(0,0,0)$ and at $a(\frac{1}{4},\frac{1}{4},\frac{1}{4})$. The structure factor becomes
-\begin{align}
-S^{Si}_{\bold{G}} &= f_{Si}\cdot \left( 1 + e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}\label{sistructure}
-\end{align}
-The first factor is zero if and only if $h+k+l\equiv_4 2$.
+Silicon is monoatomic with two atoms in the conventional cell, at $(0,0,0)$ and at $a(\frac{1}{4},\frac{1}{4},\frac{1}{4})$.
+The structure factor becomes
 
-\subsubsection{GaAs and InP}
-The other two crystals in this lab both have a zink blende structure with two different atomic factors , say $f_\alpha,f_\beta$. The $\alpha$-atoms are in an fcc structure starting at the origin and the $beta$-atoms are displaced by $\frac{1}{4}\frac{1}{4}\frac{1}{4}$, again in a cubic fcc structure. The structure factor becomes
-\begin{align}
-S^{\alpha\beta}_{\bold{G}} &= \left( f_\alpha + f_\beta e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}\label{zincblendestructure}
-\end{align}
-\subsubsection{(h,k,l)-triples allowed by the structure factors}
-The atomic form factors are $f_{Ga}=31$, $f_{As}=33$, $f_{In}=49$ and $f_{P}=15$. The structure factor for InP is only zero if and only if the fcc structure factor is zero. The same goes for GaAs, except when $h+k+l\equiv_4 2$ (same case as for Si) the structure factor becomes small which might affect the diffraction peaks.
+\begin{equation}
+    \label{eq:sistructure}
+    S^{Si}_{\bold{G}}
+    = f_{Si}\cdot \left( 1 + e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}
+\end{equation}
+
+\textbf{GaAs and InP}\\
+The other two crystals in this lab both have a zincblende structure with two different atomic factors , say $f_\alpha,f_\beta$.
+The $\alpha$-atoms are in an fcc structure starting at the origin and the $beta$-atoms are displaced by $\frac{1}{4}\frac{1}{4}\frac{1}{4}$, again in a cubic fcc structure.
+The structure factor becomes
+
+\begin{equation}
+    \label{eq:zincblendestructure}
+    S^{\alpha\beta}_{\bold{G}}
+    = \left( f_\alpha + f_\beta e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}
+\end{equation}
+
 \section{Measurements results}
 \plot{A}{Description A}
 \plot{B}{Description B}
 \plot{C}{Description C}
 \plot{D}{Description D}
-\plot{NaCl}{Description Na.Cl}
+\plot{NaCl}{Description NaCl}
+
+\begin{tabular}{ |l|l| }
+    \hline
+    \multicolumn{2}{|c|}{Sample A} \\
+    \hline
+    $\beta_1$ & 6.5\degree \\
+    $\beta_2$ & 19.8\degree \\
+    $\beta_3$ & 26.9\degree \\
+    ($\beta_4$ & 34.4\degree) \\
+    \hline
+\end{tabular}
+
+\begin{tabular}{ |l|l| }
+    \hline
+    \multicolumn{2}{|c|}{Sample B} \\
+    \hline
+    $\beta_1$ & 14.7\degree \\
+    ($\beta_2$ & 30.2\degree) \\
+    \hline
+\end{tabular}
+
+\begin{tabular}{ |l|l| }
+    \hline
+    \multicolumn{2}{|c|}{Sample C} \\
+    \hline
+    $\beta_1$ & 15.1\degree \\
+    $\beta_2$ & 27.6\degree \\
+    $\beta_3$ & 31.4\degree \\
+    \hline
+\end{tabular}
+
+\begin{tabular}{ |l|l| }
+    \hline
+    \multicolumn{2}{|c|}{Sample D} \\
+    \hline
+    $\beta_1$ & 6.0\degree \\
+    $\beta_2$ & 12.1\degree \\
+    $\beta_3$ & 18.3\degree \\
+    $\beta_4$ & 24.8\degree \\
+    \hline
+\end{tabular}
+
+\begin{tabular}{ |l|l| }
+    \hline
+    \multicolumn{2}{|c|}{Sample NaCl} \\
+    \hline
+    $\beta_1$ & 7.2\degree \\
+    $\beta_2$ & 14.5\degree \\
+    $\beta_3$ & 22.1\degree \\
+    \hline
+\end{tabular}
 
 \section{Discussion of the results}
 
