@@ -46,7 +46,7 @@ Firstly, to compute the wavelength ($\lambda$) of the X-rays, by measuring the d
 Secondly, for four samples, labled A, B, C and D, determine either the material in question or the orientation of the crystal plane of said material.
 
 \section{Experiment procedure}
-\subsection{$\beta-2\beta$ scan}
+\subsection{$\boldsymbol{\beta}\boldsymbol{-}\boldsymbol{2}\boldsymbol{\beta}$ scan}
 We can describe the reflection of an X-ray beam by treating it as specular (mirrorlike) and assuming elastic scattering. From these premises we can find Bragg's law
 \begin{equation}
     \label{eq:braggs}
@@ -65,6 +65,7 @@ When the scattering vector equals a particular reciprocal lattice vector, $\bold
 
 
 \subsection{Structure factors}
+The second condition for a diffraction peak to appear is that the structure factor must be nonzero.
 The structure factor $S_{\bold{G}}$ of a crystal structure can be calculated as below. Here $n$ is the number of atoms in the basic lattice, and atom $j$ is at position $\bold{r}_j$ with atomic form factor $f_j$. The atomic form factors are approximately equal to the atomic number.\\
 \begin{equation}
     S_{\bold{G}} = \sum^n_{j=1} f_j e^{-i \left( \bold{r}_j \cdot \bold{G}\right)}
@@ -107,10 +108,9 @@ The structure factor becomes
     = \left( f_\alpha + f_\beta e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}
 \end{equation}
 
-\subsubsection{(h,k,l)-triples allowed by the structure factors}
 The atomic form factors are $f_{Ga}=31$, $f_{As}=33$, $f_{In}=49$ and $f_{P}=15$.
 The structure factor for InP is only zero if and only if the fcc structure factor is zero.
-The same goes for GaAs, except when $h+k+l\equiv_4 2$ (same case as for Si) the structure factor becomes small which might affect the diffraction peaks.
+The same goes for GaAs, except when $h+k+l\equiv_4 2$ the structure factor becomes small which might affect the diffraction peaks.
 
 \section{Measurements results}
 \plot{A}{Description A}
