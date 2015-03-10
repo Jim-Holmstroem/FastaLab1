@@ -44,7 +44,7 @@ In this laboratory we are faced with two main tasks. Firstly, to compute the wav
 \subsection{$\beta-2\beta$ scan}
 
 \subsection{Structure factors}
-The structure factor $S_{\bold{G}}$ of a crystal structure can be calculated as below. Here $n$ is the number of atoms in the basic lattice, and atom $j$ is at position $\bold{r}_j$ with atomic form factor $f_j$.\\
+The structure factor $S_{\bold{G}}$ of a crystal structure is calculated as below. $n$ is the number of atoms in the basic lattice, and atom $j$ is at position $\bold{r}_j$ with atomic form factor $f_j$. The atomic form factors are approximately equal to the atomic number.\\
 \begin{align}
 S_{\bold{G}} &= \sum^n_{j=1} f_j e^{-i \left( \bold{r}_j \cdot \bold{G}\right)}
 \end{align}
@@ -55,31 +55,33 @@ S^{fcc}_{\bold{G}} &= f\cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\rig
 \end{align}
 The fcc structure factor is 0 if and only if $h$, $k$ and $l$ are all even or all odd.\\
 
-\textbf{NaCl}\\
+\subsubsection{NaCl}
 The two atoms in the conventional cell of NaCl, one Na and one Cl, are each in an fcc structure. Putting an Na at the origin, the Cl structure will be displaced by $\frac{a}{2}\bold{e}_x$. The structure factor sums can then be expressed using the fcc structure factor above as
 \begin{align}
-S^{NaCl}_{\bold{G}} &= \left( f_{Na} + f_{Cl}e^{2\pi i\cdot \frac{h}{2}} \right) \cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\right]\\
+S^{NaCl}_{\bold{G}} &= \left( f_{Na} + f_{Cl}e^{2\pi i\cdot \frac{h}{2}} \right) \cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\right]\nonumber\\
 &= \left( f_{Na} + f_{Cl}(-1)^{h} \right) \cdot S^{fcc}_{\bold{G}}
 \end{align}\label{naclstructure}
-
-\textbf{Si}\\
+With $f_{Na}=11$ and $f_{Cl}=17$ the structure factor will only be $0$ when the fcc part is $0$.
+\subsubsection{Si}
 Silicon is monoatomic with two atoms in the conventional cell, at $(0,0,0)$ and at $a(\frac{1}{4},\frac{1}{4},\frac{1}{4})$. The structure factor becomes
 \begin{align}
 S^{Si}_{\bold{G}} &= f_{Si}\cdot \left( 1 + e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}\label{sistructure}
 \end{align}
+The first factor is zero if and only if $h+k+l\equiv_4 2$.
 
-\textbf{GaAs and InP}\\
+\subsubsection{GaAs and InP}
 The other two crystals in this lab both have a zink blende structure with two different atomic factors , say $f_\alpha,f_\beta$. The $\alpha$-atoms are in an fcc structure starting at the origin and the $beta$-atoms are displaced by $\frac{1}{4}\frac{1}{4}\frac{1}{4}$, again in a cubic fcc structure. The structure factor becomes
 \begin{align}
 S^{\alpha\beta}_{\bold{G}} &= \left( f_\alpha + f_\beta e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}\label{zincblendestructure}
 \end{align}
-
+\subsubsection{(h,k,l)-triples allowed by the structure factors}
+The atomic form factors are $f_{Ga}=31$, $f_{As}=33$, $f_{In}=49$ and $f_{P}=15$. The structure factor for InP is only zero if and only if the fcc structure factor is zero. The same goes for GaAs, except when $h+k+l\equiv_4 2$ (same case as for Si) the structure factor becomes small which might affect the diffraction peaks.
 \section{Measurements results}
 \plot{A}{Description A}
 \plot{B}{Description B}
 \plot{C}{Description C}
 \plot{D}{Description D}
-\plot{NaCl}{Description NaCl}
+\plot{NaCl}{Description Na.Cl}
 
 \section{Discussion of the results}
 
