@@ -1,10 +1,32 @@
 #!/usr/bin/env python
-from __future__ import division, print_function
+# -*- coding: utf-8 -*-
+
+from __future__ import division, print_function, unicode_literals
+
+from itertools import (
+    chain,
+)
 
 import os
 
 import numpy as np
-from matplotlib import pyplot
+from matplotlib import (
+    rc,
+)
+rc(
+    'font', **{
+        'family': 'sans-serif',
+        'sans-serif': ['Helvetica', ]
+    }
+)
+## for Palatino and other serif fonts use:
+#rc('font',**{'family':'serif','serif':['Palatino']})
+rc(
+    'text', usetex=True, **{
+        'latex.unicode': True,
+    }
+)
+
 import pandas as pd
 
 from scipy import signal
@@ -21,9 +43,45 @@ def read_csv(plotname):
     )
 
 
-def peaks(plotname, data):
+def save(ax, name, **kwargs):
+    """
+    kwargs :: dict
+        to override the kwargs of fig.savefig(.)
+    """
+    ax.get_figure().savefig(
+        os.path.join(
+            plot_location,
+            '{}.pdf'.format(name),
+        ),
+        **dict(
+            chain(
+                {
+                    'dpi': 1200,
+                }.items(),
+                kwargs.items()
+            )
+        )
+    )
 
-    ax = data.plot()
+
+def plot(data, title=None):
+    ax = data.plot(
+        legend=False,
+        title=title,
+    )
+    ax.set_xlabel(
+        r'$\beta [\textit{\u00B0}\,]$'
+    )
+    ax.set_ylabel(
+        r''
+    )
+
+    return ax
+
+
+def peaks(name, data):
+    ax = plot(data)
+
     peaks = pd.Series(
         data.index[
             signal.find_peaks_cwt(
@@ -37,14 +95,14 @@ def peaks(plotname, data):
         """
         Parameters
         ----------
-        intensity : pd.Series
-        peaks : pd.Series
+        intensity :: pd.Series
+        peaks :: pd.Series
             index is default enumeration
             values is the raw intensity peaks (which are to be corrected)
 
         Returns
         -------
-        postprocessed_peaks : pd.Series
+        postprocessed_peaks :: pd.Series
             index is default enumeration
             values is the corrected intensity peaks.
 
@@ -68,39 +126,31 @@ def peaks(plotname, data):
 
     map(ax.axvline, postprocessed_peaks)
 
-    ax.get_figure().savefig(
-        os.path.join(
-            plot_location,
-            '{}_peaks.pdf'.format(plotname),
-        )
-    )
+    save(ax, '{name}_peaks'.format(name=name))
 
 
-def ordinary(plotname, data):
-    ax = data.plot()
+def ordinary(name, data):
+    ax = plot(data)
 
-    ax.get_figure().savefig(
-        os.path.join(
-            plot_location,
-            '{}.pdf'.format(plotname),
-        )
-    )
+    save(ax, name)
 
 
-def main(plotname):
-    data = read_csv(plotname)
-    ordinary(plotname, data)
-    peaks(plotname, data)
+def main(name):
+    data = read_csv(name)
+    ordinary(name, data)
+    peaks(name, data)
 
 
 if __name__ == '__main__':
     import argparse
 
-    parser = argparse.ArgumentParser(description='Render PDF of the csv data')
+    parser = argparse.ArgumentParser(
+        description="Render PDF of the csv data(with peaks and other information)"
+    )
     parser.add_argument('plotname', metavar='plotname', type=str)
 
     args = parser.parse_args()
 
     main(
-        plotname=args.plotname,
+        name=args.plotname,
     )
