@@ -125,7 +125,18 @@ def peaks(name, data):
 
     postprocessed_peaks = postprocess(data.intensity, peaks)
 
-    map(ax.axvline, postprocessed_peaks)
+    def line(peak):
+        ax.text(
+            peak,
+            1.01*ax.axis()[3],
+            r'$\beta={}$\u00B0'.format(peak),
+            horizontalalignment='center',
+            verticalalignment='bottom',
+            fontsize='x-small',
+        )
+        ax.axvline(peak)
+
+    map(line, postprocessed_peaks)
 
     save(ax, '{name}_peaks'.format(name=name))
 
