@@ -57,6 +57,7 @@ def save(ax, name, **kwargs):
             chain(
                 {
                     'dpi': 1200,
+                    'format': 'pdf',
                 }.items(),
                 kwargs.items()
             )
@@ -70,10 +71,10 @@ def plot(data, title=None):
         title=title,
     )
     ax.set_xlabel(
-        r'$\beta [\textit{\u00B0}\,]$'
+        r'$\beta\, [\textit{\u00B0}\,]$'
     )
     ax.set_ylabel(
-        r''
+        r'$R\, [s^{-1}]$'
     )
 
     return ax
