@@ -215,9 +215,9 @@ Inputting the measured peak angles gives the following values for $\lambda$:\\
 
 Given the X-ray wavelength, equation \eqref{braggs} can be used to find the expected angles for different materials and crystal cuts.
 
-\subsection{Determining the material of sample A}
+\subsection{Determining the materials of sample A and D}
 
-As the crystal sample A is cut with Miller index $(1,1,1)$,
+As the crystal samples A and D are cut with Miller index $(1,1,1)$,
 the integer triple $(h,k,l)=m\cdot (1,1,1)$ for integers $m$.
 
 With $\lambda$ in equation \eqref{eq:braggs} known, the equation can be rearranged to find expected angles for the a crystal.
@@ -229,27 +229,30 @@ With $\lambda$ in equation \eqref{eq:braggs} known, the equation can be rearrang
 Which of these angles give peaks depend on the structure factor of the sample.
 For InP the structure factor is always nonzero along this plane - $h,k,l$ always have the same parity.
 The structure factor of Si disappears when $h+k+l\equiv_4 2$, which happens for $m=2,6,10,...$.
+GaAs is expected to have no or small peaks for this case, as the structure factor becomes very small due to the atomic form factors.
 The expected angles are compared to the experimental measurements in the table below.
 
-\begin{tabular}{ |c|c|c|c|c|c| }
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c| }
     \hline
-    \multicolumn{2}{|c|}{$\theta_{obs}$}
+    \multicolumn{4}{|c|}{$\theta_{obs}$}
 	& \multicolumn{2}{|c|}{InP}
-	& \multicolumn{2}{|c|}{Si}\\
+	& \multicolumn{2}{|c|}{Si}
+	& \multicolumn{2}{|c|}{GaAs}\\
     \hline
-	\multicolumn{2}{|c|}{Angle}& $m$ & $\theta$ & $m$ & $\theta$ \\
+	\multicolumn{2}{|c|}{Sample A} & \multicolumn{2}{|c|}{Sample B} & $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
 	\hline
-    $\beta_1$	& 6.5\degree	& 1 & 5.9745\degree & 1	& 6.4606\degree	\\
-    $\beta_2$	& 19.8\degree	& 2 & 12.015\degree & 3	& 19.728\degree	\\
-    $\beta_3$	& 26.9\degree	& 3 & 18.195\degree & 4	& 26.749\degree	\\
-    $\beta_4$	& 34.4\degree	& 4 & 24.604\degree & 5	& 34.236\degree	\\
-    -			& -				& 5 & 31.361\degree & 7	& 51.965\degree	\\
+    $\beta_1$	& 6.5\degree	& $\beta_1$	& 6.0\degree	& 1 & 5.975\degree & 1	& 6.461\degree &  1		& 6.208\degree	\\
+    $\beta_2$	& 19.8\degree	& $\beta_2$	& 12.1\degree	& 2 & 12.02\degree & 3	& 19.73\degree & (2)	& 12.49\degree	\\
+    $\beta_3$	& 26.9\degree	& $\beta_3$	& 18.3\degree	& 3 & 18.20\degree & 4	& 26.74\degree &  3		& 18.93\degree	\\
+    $\beta_4$	& 34.4\degree	& $\beta_4$	& 24.8\degree	& 4 & 24.60\degree & 5	& 34.24\degree &  4		& 25.63\degree	\\
+    -			& -				& -			& -				& 5 & 31.36\degree & 7	& 51.97\degree &  5		& 32.73\degree	\\
 	\hline
 \end{tabular}
 
-The $m=1,3,4,5$ peaks of Si fit very neatly with the experimental data, while the InP peaks fit much poorly.
-Nothing is visible in the data near InP:s $m=2$-peak.
-Sample A is cleary Si.
+The $m=1,3,4,5$ peaks of Si fit very neatly with the experimental data for sample A, while the InP peaks fit poorly.
+Nothing is visible in the sample A data near InP:s $m=2$-peak.
+Sample A is cleary Si.\\
+Sample B fits with InP and GaAs, but better with InP. The peak at $\beta_2$ would be diminished if it was a GaAs sample, as the structure factor would be very low. 
 
 \subsection{Determining the crystal planes of samples B and C}
 
@@ -269,7 +272,7 @@ Theoretical GaAs peaks for which the structure factor is almost 0 are within par
 	& \multicolumn{2}{|c|}{$(m,m,0)$}
 	& \multicolumn{2}{|c|}{$(m,m,m)$}\\
     \hline
-	\multicolumn{2}{|c|}{Angle}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
+	\multicolumn{2}{|c|}{Sample B}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
 	\hline
     $\beta_1$	& 14.7\degree	& (2)	& 7.173\degree & 2	& 10.17\degree & 1	& 6.208\degree	\\
     $\beta_2$	& 30.2\degree	& 4		& 14.46\degree & 4	& 20.68\degree & (2)	& 12.49\degree	\\
@@ -288,7 +291,7 @@ Theoretical GaAs peaks for which the structure factor is almost 0 are within par
 	& \multicolumn{2}{|c|}{$(m,m,0)$}
 	& \multicolumn{2}{|c|}{$(m,m,m)$}\\
     \hline
-	\multicolumn{2}{|c|}{Angle}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
+	\multicolumn{2}{|c|}{Sample C}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
 	\hline
     $\beta_1$	& 15.1\degree	& 4		& 15.06\degree	& 2	& 10.59\degree	& 1	& 6.461\degree	\\
     $\beta_2$	& 27.6\degree	& 8		& 31.31\degree	& 4	& 21.56\degree	& 3	& 19.73\degree	\\
@@ -297,12 +300,12 @@ Theoretical GaAs peaks for which the structure factor is almost 0 are within par
 	\hline
 \end{tabular}
 
-
 The obvious best fit for GaAs is the $(1,0,0)$-plane.
-The possible low-intensity peaks for $m=2$, $m=4$ are, if they're even there, lost in the measurement noise.
-
-
-\subsection{Determining the material of sample D}
+The possible low-intensity peaks for $m=2$, $m=4$ are, if they're even there, lost in the measurement noise.\\
+Sample D fits best with $(1,0,0)$ as well.
+The unexplained peak $\beta_2$ corresponds well with $m=6$,
+where the theoretical structure factor is zero. $m=6$ is at least diminished,
+as the peaks do not follow the monotone-decreasing pattern of other plots.
 
 \section{Conclusion}
 
