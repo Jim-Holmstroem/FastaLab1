@@ -64,22 +64,23 @@ This is done by rotating the sample to an angle $\beta$ and subsequently moving 
 \image{uppstallning}{The $\beta-2\beta$ scan setup and visualization of corresponding wave vector in reciprocal space}
 The scattering vector $\bold{q}$ equals to the difference between the outgoing and incoming wavevectors,
 $\bold{k}' - \bold{k}$. By equation (20) in chapter 2 from Kittel \cite{Kittel} the scattering
-amplitude $F$ is given by
+amplitude $F$ is theoretically found to be
 \begin{equation}
     \label{eq:scatamp}
     F = \sum_\bold{G} \int dV n_{\bold{G}} e^{i(\bold{G}-\bold{q})\cdot r}
 \end{equation}
 
-When the scattering vector equals a particular reciprocal lattice vector, $\bold{q} = \bold{G}$, the intensity of the reflection will peak in the diffractogram. 
+When the scattering vector equals a particular reciprocal lattice vector, $\bold{q} = \bold{G}$, the intensity of the reflection will peak in the diffractogram if the structure factor allows it.
+This occurs since when $\bold{q}$ differs significally from $\bold{G}$, $F$ will becomes negligibly small.
 
 
 In bounded mode the scattering vector $\bold{q}$ is altered only by the single angle $\beta$.
 The length of the scattering vector can be determined from figure 1 as $\abs{\bold{q}} = 2 \abs{\bold{k}} sin(\beta)$.
-This means that $\bold{q}$ is bounded by $2 \abs{\bold{k}} sin(\beta_{min}) < \abs{\bold{q}} < 2 \abs{\bold{k}} sin(\beta_{max})$.
+This means in that $\bold{q}$ is bounded by $\beta$ which creates the limitation $2 \abs{\bold{k}} sin(\beta_{min}) < \abs{\bold{q}} < 2 \abs{\bold{k}} sin(\beta_{max})$.
 A great limitation is furthermore that in coupled mode, only beams reflected off planes with normals perpendicular to the scattering vector might be measured by the detector. The covered space of the reciprocal space is therefore only a limited curve.
 
 
-A Leybold Didactic diffractometer (no. 554 811) was used in this laboratory. The measurements were all made in coupled mode (i.e $\beta-2\beta$ scan). The general settings for the diffractometer were maximum voltage (35 kV), minimum current (1 mA) and minimal step angle (0.1$\degree$). For the NaCl measuremnet, a time step of 1 s and incident angles from 2.5$\degree$ to 30$\degree$ were used. The other samples were measured with a time step of 4 s and incident angles from 2.5$\degree$ to 35$\degree$. The measurement result of the reflected intensity and its corresponding incident angle $\beta$ was automatically recorded during the laboratory. The peaks were thereafter manually detected.
+A Leybold Didactic diffractometer (no. 554 811) was used in this laboratory. The measurements were all made in coupled mode (i.e $\beta-2\beta$ scan). The default settings for the diffractometer were a voltage of 35 kV (maximum), a current of 1 mA (minimum) and a step angle of 0.1$\degree$ (minimal). For the NaCl measuremnet, a time step of 1 s and incident angles from 2.5$\degree$ to 30$\degree$ were used. The other samples were measured with a time step of 4 s and incident angles from 2.5$\degree$ to 35$\degree$. The measurement result of the reflected intensity and its corresponding incident angle $\beta$ was automatically recorded during the laboratory. The peaks were thereafter manually detected by searching for distinct local maxima.
 
 
 \subsection{Structure factors}
