@@ -253,14 +253,16 @@ Sample A is cleary Si.
 
 \subsection{Determining the crystal planes of samples B and C}
 
-Given the material and the wavelength, we can investigate along which plane a crystal was cut.
-These diamond/zincblende crystals must be cut along $(1,0,0)$, $(1,1,0)$ or $(1,1,1)$, of which the $(h,k,l)$-vectors then are multiples.
-giving three different sequences of $h,k,l$-triples allowed by the structure factor.
+Given the material and the wavelength, one can investigate along which plane a crystal was cut.
+These diamond/zincblende crystals must be cut along planes with Miller indices $(1,0,0)$, $(1,1,0)$ or $(1,1,1)$, of which the $(h,k,l)$-vectors then are multiples.
 For example, the $(1,1,0)$-plane gives $\sqrt{h^2+k^2+l^2}=\sqrt{2},\sqrt{4},\sqrt{6}$ et cetera.
-The first angles for which the structure factor is nonzero are plotted below.
-Theoretical peaks for which the structure factor is almost 0 are within parantheses.
+
+The first angles for which the structure factor is nonzero are plotted below for each crystal.
+Theoretical GaAs peaks for which the structure factor is almost 0 are within parantheses.
 
 \begin{tabular}{ |c|c|c|c|c|c|c|c| }
+	\hline
+    \multicolumn{8}{|c|}{GaAs}\\
     \hline
     \multicolumn{2}{|c|}{$\theta_{obs}$}
 	& \multicolumn{2}{|c|}{$(m,0,0)$}
@@ -276,7 +278,27 @@ Theoretical peaks for which the structure factor is almost 0 are within paranthe
 	\hline
 \end{tabular}
 
-The obvious best fit is the $(1,0,0)$-plane.
+
+\begin{tabular}{ |c|c|c|c|c|c|c|c| }
+	\hline
+    \multicolumn{8}{|c|}{Si}\\
+    \hline
+    \multicolumn{2}{|c|}{$\theta_{obs}$}
+	& \multicolumn{2}{|c|}{$(m,0,0)$}
+	& \multicolumn{2}{|c|}{$(m,m,0)$}
+	& \multicolumn{2}{|c|}{$(m,m,m)$}\\
+    \hline
+	\multicolumn{2}{|c|}{Angle}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
+	\hline
+    $\beta_1$	& 15.1\degree	& 4		& 15.06\degree	& 2	& 10.59\degree	& 1	& 6.461\degree	\\
+    $\beta_2$	& 27.6\degree	& 8		& 31.31\degree	& 4	& 21.56\degree	& 3	& 19.73\degree	\\
+    $\beta_3$	& 31.4\degree	& 12	& 51.22\degree	& 6	& 33.45\degree	& 4	& 26.75\degree	\\
+    -			& -				& 16	& -				& 8	& 47.31\degree	& 5	& 34.24\degree	\\
+	\hline
+\end{tabular}
+
+
+The obvious best fit for GaAs is the $(1,0,0)$-plane.
 The possible low-intensity peaks for $m=2$, $m=4$ are, if they're even there, lost in the measurement noise.
 
 
