@@ -182,14 +182,29 @@ The same goes for GaAs, except when $h+k+l\equiv_4 2$ the structure factor becom
 \subsection{Finding the X-ray wavelength from the NaCl diffraction pattern}
 The crystal surface is cut parallel to the (1,0,0) lattice plane.
 In coupled mode the $hkl$-vectors will be integer multiples of this Miller index.
-$\bold{G}=\frac{2\pi}{a}(n,0,0)$ where $n$ is an integer.
+$\bold{G}=\frac{2\pi}{a}(m,0,0)$ where $m$ is an integer.
 The structure factor for NaCl is nonzero when $h,k,l$ are all even or all odd.
-This happens when $n$ is even.
+This happens when $m$ is even.
 From \eqref{braggs} our diffraction maxima occurs when
 \begin{equation}
 \frac{2a}{n}sin\theta=\lambda\nonumber
 \end{equation}
-Inputting the measured peak angles gives the following values for $\lambda$:
+where $a=5.63\text{ Å}$.\\
+As the (the X-ray wavelength) is constant an increasing angle comes with increasing $m$.
+The first maxmimum occurs for $m=2$, the second for $m=4$ et cetera.
+Inputting the measured peak angles gives the following values for $\lambda$:\\
+
+\begin{tabular}{ |l|l|l|l| }
+    \hline
+    \multicolumn{2}{|c|}{Angle}& $m$ & $\lambda$\\
+    \hline
+    $\beta_1$	& 7.2\degree	& 2	& 0.7056 Å	\\
+    $\beta_2$	& 14.5\degree	& 4	& 0.7048	\\
+    $\beta_3$	& 22.1\degree	& 6	& 0.7060	\\
+	\hline
+	\multicolumn{3}{r|}{mean:}	& 0.7055	\\
+    \cline{4-4}
+\end{tabular}
 
 By Bragg's beard!
 
