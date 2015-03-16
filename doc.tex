@@ -18,6 +18,8 @@ linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 
+\usepackage{float}
+
 \usepackage{gensymb}
 
 \usepackage{authblk}
@@ -84,7 +86,13 @@ If we didn't have coupled mode on, then we could have freely moved the detector 
 In short, the locus of scattering vectors in reciprocal space is a line segment along the normal to the crystal plane cut.
 
 
-A Leybold Didactic diffractometer (no. 554 811) was used in this laboratory. The measurements were all made in coupled mode (i.e $\beta-2\beta$ scan). The default settings for the diffractometer were a voltage of 35 kV (maximum), a current of 1 mA (minimum) and a step angle of 0.1$\degree$ (minimal). For the NaCl measuremnet, a time step of 1 s and incident angles from 2.5$\degree$ to 30$\degree$ were used. The other samples were measured with a time step of 4 s and incident angles from 2.5$\degree$ to 35$\degree$. The measurement result of the reflected intensity and its corresponding incident angle $\beta$ was automatically recorded during the laboratory. The peaks were thereafter manually detected by searching for distinct local maxima. The first maximum, with a broader peak, come from the bremsstrahlung and do not concern this experiment, thus omitted.
+A Leybold Didactic diffractometer (no. 554 811) was used in this laboratory.
+The measurements were all made in coupled mode (i.e $\beta-2\beta$ scan).
+The default settings for the diffractometer were a voltage of 35 kV (maximal), a current of 1 mA (minimal) and a step angle of 0.1$\degree$ (minimal).
+For the NaCl measuremnet, a time step of 1 s and incident angles from 2.5$\degree$ to 30$\degree$ were used.
+The other samples were measured with a time step of 4 s and incident angles from 2.5$\degree$ to 35$\degree$.
+The measurement result of the reflected intensity and its corresponding incident angle $\beta$ was automatically recorded during the laboratory.
+The peaks were thereafter manually detected by searching for distinct local maxima. The first maximum, with a broader peak, come from the bremsstrahlung and do not concern this experiment, thus omitted.
 
 
 \subsection{Structure factors}
@@ -146,58 +154,25 @@ The lattice parameters of InP and GaAs are $5.87$ Å and $5.65$ Å.
 \plot{B}{Description B}
 \plot{C}{Description C}
 \plot{D}{Description D}
-\plot{NaCl}{Description NaCl}
+\plot{Apeaks}{Description }
+\plot{Bpeaks}{Description B}
+\plot{Cpeaks}{Description C}
+\plot{Dpeaks}{Description D}
+\plot{NaClpeaks}{Description NaCl}
 
-\begin{tabular}{ |l|l| }
+\begin{center}
+\begin{tabular}{ |l||l|l|l|l|l| }
     \hline
-    \multicolumn{2}{|c|}{Sample A} \\
-    \hline
-    $\beta_1$ & 6.5\degree \\
-    $\beta_2$ & 19.8\degree \\
-    $\beta_3$ & 26.9\degree \\
-    ($\beta_4$ & 34.4\degree) \\
+     & NaCl & A & B & C & D \\
+    \hline \hline
+    $\beta_1$ & 7.2\degree & 6.5\degree & 14.7\degree & 15.1\degree & 6.0\degree \\
+    $\beta_2$ & 14.5\degree & 19.8\degree & 30.2\degree & 27.6\degree & 12.1\degree \\
+    $\beta_3$ & 22.1\degree & 26.9\degree & - & 31.4\degree & 18.3\degree \\
+    $\beta_4$ & - & 34.4\degree & - & - & 24.8\degree \\
     \hline
 \end{tabular}
+\end{center}
 
-\begin{tabular}{ |l|l| }
-    \hline
-    \multicolumn{2}{|c|}{Sample B} \\
-    \hline
-    $\beta_1$ & 14.7\degree \\
-    ($\beta_2$ & 30.2\degree) \\
-    \hline
-\end{tabular}
-
-\begin{tabular}{ |l|l| }
-    \hline
-    \multicolumn{2}{|c|}{Sample C} \\
-    \hline
-    $\beta_1$ & 15.1\degree \\
-    $\beta_2$ & 27.6\degree \\
-    $\beta_3$ & 31.4\degree \\
-    \hline
-\end{tabular}
-
-\begin{tabular}{ |l|l| }
-    \hline
-    \multicolumn{2}{|c|}{Sample D} \\
-    \hline
-    $\beta_1$ & 6.0\degree \\
-    $\beta_2$ & 12.1\degree \\
-    $\beta_3$ & 18.3\degree \\
-    $\beta_4$ & 24.8\degree \\
-    \hline
-\end{tabular}
-
-\begin{tabular}{ |l|l| }
-    \hline
-    \multicolumn{2}{|c|}{Sample NaCl} \\
-    \hline
-    $\beta_1$ & 7.2\degree \\
-    $\beta_2$ & 14.5\degree \\
-    $\beta_3$ & 22.1\degree \\
-    \hline
-\end{tabular}
 
 \section{Discussion of the results}
 
@@ -208,7 +183,7 @@ In coupled mode the $hkl$-vectors will be integer multiples of this Miller index
 $\bold{G}=\frac{2\pi}{a}(m,0,0)$ where $m$ is an integer.
 The structure factor for NaCl is nonzero when $h,k,l$ are all even or all odd.
 This happens when $m$ is even.
-From \eqref{braggs} our diffraction maxima occurs when
+From \eqref{eq:braggs} our diffraction maxima occurs when
 \begin{equation}
 \frac{2a}{n}sin\theta=\lambda\nonumber
 \end{equation}
@@ -229,7 +204,7 @@ Calculating $\lambda$ by inserting the measured peak angles give the following v
     \cline{4-4}
 \end{tabular}
 
-Given the X-ray wavelength, equation \eqref{braggs} can be used to find the expected angles for different materials and crystal cuts.
+Given the X-ray wavelength, equation \eqref{eq:braggs} can be used to find the expected angles for different materials and crystal cuts.
 
 \subsection{Determining the materials of sample A and D}
 
