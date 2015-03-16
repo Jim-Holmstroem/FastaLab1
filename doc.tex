@@ -60,7 +60,7 @@ $d(hkl)$ is the distance between parallel lattice planes of the configuration $(
 characterizing the reciprocal lattice vector $\bold{G}=\frac{2\pi}{a}(h,k,l)$. $a$ is here the lattice constant - a material parameter.
 $d(hkl)$ can be normalized and shown to be equal to $\frac{2\pi}{\abs{\bold{G}}} = \frac{2\pi}{a}\sqrt{h^2+k^2+l^2}$ \cite{Kittel}.
 In this laboratory we use a $\beta-2\beta$ scan, also known as coupled mode scan.
-The incident beam hits the sample at an angle $\beta$, which is the same as the angle of the reflecting beam.
+The incident beam hits the sample at an angle $\beta$, which is the same as the angle of the reflected beam.
 This is done by rotating the sample to an angle $\beta$ and subsequently moving the detector to an angle of $2\beta$, as shown in figure 1.
 
 \image{uppstallning}{The $\beta-2\beta$ scan setup and visualization of corresponding wave vector in reciprocal space}
@@ -75,17 +75,24 @@ amplitude $F$ is theoretically found to be
 When the scattering vector equals a particular reciprocal lattice vector, $\bold{q} = \bold{G}$, the intensity of the reflection will peak in the diffractogram if the structure factor allows it.
 This occurs since when $\bold{q}$ differs significally from $\bold{G}$, $F$ will becomes negligibly small.
 In coupled mode the scattering vector will be normal to the crystal plane, and thus a multiple of the Miller index. 
-The possible $\bold{G}$-vectors are integer multiples of the Miller index.
+The possible $\bold{G}$-vectors are integer multiples of the Miller index.\\
 
 
 In bounded mode the scattering vector $\bold{q}$ is altered only by the single angle $\beta$.
 The length of the scattering vector can be determined from figure 1 as $\abs{\bold{q}} = 2 \abs{\bold{k}} sin(\beta)$.
 This means in that $\bold{q}$ is bounded by $\beta$ which creates the limitation $2 \abs{\bold{k}} sin(\beta_{min}) < \abs{\bold{q}} < 2 \abs{\bold{k}} sin(\beta_{max})$.
 A great limitation is furthermore that in coupled mode, only beams reflected off planes with normals parallel to the scattering vector might be measured by the detector. The covered space of the reciprocal space is therefore only a limited curve.
-If we didn't have coupled mode on, then we could have freely moved the detector for every angle $\beta$ and therefore gained more information and another degree of freedom.
+If we didn't have coupled mode on, then we could have freely moved the detector for every angle $\beta$ and therefore gained more information and another degree of freedom.\\
+In short, the locus of scattering vectors in reciprocal space is a line segment along the normal to the crystal plane cut.
 
 
-A Leybold Didactic diffractometer (no. 554 811) was used in this laboratory. The measurements were all made in coupled mode (i.e $\beta-2\beta$ scan). The default settings for the diffractometer were a voltage of 35 kV (maximal), a current of 1 mA (minimal) and a step angle of 0.1$\degree$ (minimal). For the NaCl measuremnet, a time step of 1 s and incident angles from 2.5$\degree$ to 30$\degree$ were used. The other samples were measured with a time step of 4 s and incident angles from 2.5$\degree$ to 35$\degree$. The measurement result of the reflected intensity and its corresponding incident angle $\beta$ was automatically recorded during the laboratory. The peaks were thereafter manually detected by searching for distinct local maxima.
+A Leybold Didactic diffractometer (no. 554 811) was used in this laboratory.
+The measurements were all made in coupled mode (i.e $\beta-2\beta$ scan).
+The default settings for the diffractometer were a voltage of 35 kV (maximal), a current of 1 mA (minimal) and a step angle of 0.1$\degree$ (minimal).
+For the NaCl measuremnet, a time step of 1 s and incident angles from 2.5$\degree$ to 30$\degree$ were used.
+The other samples were measured with a time step of 4 s and incident angles from 2.5$\degree$ to 35$\degree$.
+The measurement result of the reflected intensity and its corresponding incident angle $\beta$ was automatically recorded during the laboratory.
+The peaks were thereafter manually detected by searching for distinct local maxima. The first maximum, with a broader peak, come from the bremsstrahlung and do not concern this experiment, thus omitted.
 
 
 \subsection{Structure factors}
@@ -224,7 +231,7 @@ The expected angles for our hypothetical sample materials are compared to the ex
 	& \multicolumn{2}{|c|}{Si}
 	& \multicolumn{2}{|c|}{GaAs}\\
     \hline
-	\multicolumn{2}{|c|}{Angle} & \multicolumn{2}{|c|}{Angle} & $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
+	\multicolumn{2}{|c|}{$\theta$} & \multicolumn{2}{|c|}{$\theta$} & $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
 	\hline
     $\beta_1$	& 6.5\degree	& $\beta_1$	& 6.0\degree	& 1 & 5.975\degree & 1	& 6.461\degree &  1		& 6.208\degree	\\
     $\beta_2$	& 19.8\degree	& $\beta_2$	& 12.1\degree	& 2 & 12.02\degree & 3	& 19.73\degree & (2)	& 12.49\degree	\\
@@ -257,7 +264,7 @@ Theoretical GaAs peaks for which the structure factor is almost 0 are within par
 	& \multicolumn{2}{|c|}{$110$}
 	& \multicolumn{2}{|c|}{$111$}\\
     \hline
-	\multicolumn{2}{|c|}{Angle}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
+	\multicolumn{2}{|c|}{$\theta$}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
 	\hline
     $\beta_1$	& 14.7\degree	& (2)	& 7.173\degree & 2	& 10.17\degree & 1	& 6.208\degree	\\
     $\beta_2$	& 30.2\degree	& 4		& 14.46\degree & 4	& 20.68\degree & (2)	& 12.49\degree	\\
@@ -272,11 +279,11 @@ Theoretical GaAs peaks for which the structure factor is almost 0 are within par
     \multicolumn{8}{|c|}{Si}\\
     \hline
     \multicolumn{2}{|c|}{Sample C}
-	& \multicolumn{2}{|c|}{$(m,0,0)$}
-	& \multicolumn{2}{|c|}{$(m,m,0)$}
-	& \multicolumn{2}{|c|}{$(m,m,m)$}\\
+	& \multicolumn{2}{|c|}{$100$}
+	& \multicolumn{2}{|c|}{$110$}
+	& \multicolumn{2}{|c|}{$111$}\\
     \hline
-	\multicolumn{2}{|c|}{Angle}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
+	\multicolumn{2}{|c|}{$\theta$}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
 	\hline
     $\beta_1$	& 15.1\degree	& 4		& 15.06\degree	& 2	& 10.59\degree	& 1	& 6.461\degree	\\
     $\beta_2$	& 27.6\degree	& 8		& 31.31\degree	& 4	& 21.56\degree	& 3	& 19.73\degree	\\
