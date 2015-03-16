@@ -72,6 +72,8 @@ amplitude $F$ is theoretically found to be
 
 When the scattering vector equals a particular reciprocal lattice vector, $\bold{q} = \bold{G}$, the intensity of the reflection will peak in the diffractogram if the structure factor allows it.
 This occurs since when $\bold{q}$ differs significally from $\bold{G}$, $F$ will becomes negligibly small.
+In coupled mode the scattering vector will be normal to the crystal plane, and thus a multiple of the Miller index. 
+The possible $\bold{G}$-vectors are integer multiples of the Miller index.
 
 
 In bounded mode the scattering vector $\bold{q}$ is altered only by the single angle $\beta$.
@@ -198,7 +200,9 @@ The lattice parameters of InP and GaAs are $5.87$ Å and $5.65$ Å.
 \end{tabular}
 
 \section{Discussion of the results}
+
 \subsection{Finding the X-ray wavelength from the NaCl diffraction pattern}
+
 The crystal surface is cut parallel to the $100$ lattice plane.
 In coupled mode the $hkl$-vectors will be integer multiples of this Miller index.
 $\bold{G}=\frac{2\pi}{a}(m,0,0)$ where $m$ is an integer.
@@ -211,7 +215,7 @@ From \eqref{braggs} our diffraction maxima occurs when
 where $a=5.63\text{ Å}$.\\
 As the (the X-ray wavelength) is constant an increasing angle comes with increasing $m$.
 The first maxmimum occurs for $m=2$, the second for $m=4$ et cetera.
-Inputting the measured peak angles gives the following values for $\lambda$:\\
+Calculating $\lambda$ by inserting the measured peak angles give the following values for the X-ray wavelength.\\
 
 \begin{tabular}{ |l|l|l|l| }
     \hline
@@ -221,7 +225,7 @@ Inputting the measured peak angles gives the following values for $\lambda$:\\
     $\beta_2$	& 14.5\degree	& 4	& 0.7048	\\
     $\beta_3$	& 22.1\degree	& 6	& 0.7060	\\
 	\hline
-	\multicolumn{3}{r|}{mean:}	& 0.7055	\\
+	\multicolumn{3}{r|}{$\hat{\lambda}$:}	& 0.7055	\\
     \cline{4-4}
 \end{tabular}
 
@@ -242,16 +246,17 @@ Which of these angles give peaks depend on the structure factor of the sample.
 For InP the structure factor is always nonzero along this plane - $h,k,l$ always have the same parity.
 The structure factor of Si disappears when $h+k+l\equiv_4 2$, which happens for $m=2,6,10,...$.
 GaAs is expected to have no or small peaks for this case, as the structure factor becomes very small due to the atomic form factors.
-The expected angles are compared to the experimental measurements in the table below.
+The expected angles for our hypothetical sample materials are compared to the experimental measurements in the table below.
 
 \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c| }
     \hline
-    \multicolumn{4}{|c|}{$\theta_{obs}$}
+    \multicolumn{2}{|c|}{Sample A}
+	& \multicolumn{2}{|c|}{Sample D}
 	& \multicolumn{2}{|c|}{InP}
 	& \multicolumn{2}{|c|}{Si}
 	& \multicolumn{2}{|c|}{GaAs}\\
     \hline
-	\multicolumn{2}{|c|}{Sample A} & \multicolumn{2}{|c|}{Sample B} & $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
+	\multicolumn{2}{|c|}{Angle} & \multicolumn{2}{|c|}{Angle} & $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
 	\hline
     $\beta_1$	& 6.5\degree	& $\beta_1$	& 6.0\degree	& 1 & 5.975\degree & 1	& 6.461\degree &  1		& 6.208\degree	\\
     $\beta_2$	& 19.8\degree	& $\beta_2$	& 12.1\degree	& 2 & 12.02\degree & 3	& 19.73\degree & (2)	& 12.49\degree	\\
@@ -279,12 +284,12 @@ Theoretical GaAs peaks for which the structure factor is almost 0 are within par
 	\hline
     \multicolumn{8}{|c|}{GaAs}\\
     \hline
-    \multicolumn{2}{|c|}{$\theta_{obs}$}
+    \multicolumn{2}{|c|}{Sample B}
 	& \multicolumn{2}{|c|}{$100$}
 	& \multicolumn{2}{|c|}{$110$}
 	& \multicolumn{2}{|c|}{$111$}\\
     \hline
-	\multicolumn{2}{|c|}{Sample B}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
+	\multicolumn{2}{|c|}{Angle}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
 	\hline
     $\beta_1$	& 14.7\degree	& (2)	& 7.173\degree & 2	& 10.17\degree & 1	& 6.208\degree	\\
     $\beta_2$	& 30.2\degree	& 4		& 14.46\degree & 4	& 20.68\degree & (2)	& 12.49\degree	\\
@@ -298,12 +303,12 @@ Theoretical GaAs peaks for which the structure factor is almost 0 are within par
 	\hline
     \multicolumn{8}{|c|}{Si}\\
     \hline
-    \multicolumn{2}{|c|}{$\theta_{obs}$}
+    \multicolumn{2}{|c|}{Sample C}
 	& \multicolumn{2}{|c|}{$(m,0,0)$}
 	& \multicolumn{2}{|c|}{$(m,m,0)$}
 	& \multicolumn{2}{|c|}{$(m,m,m)$}\\
     \hline
-	\multicolumn{2}{|c|}{Sample C}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
+	\multicolumn{2}{|c|}{Angle}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
 	\hline
     $\beta_1$	& 15.1\degree	& 4		& 15.06\degree	& 2	& 10.59\degree	& 1	& 6.461\degree	\\
     $\beta_2$	& 27.6\degree	& 8		& 31.31\degree	& 4	& 21.56\degree	& 3	& 19.73\degree	\\
