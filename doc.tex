@@ -8,6 +8,7 @@ linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
 \usepackage{verbatim}
 \usepackage{graphicx}
 \usepackage{multirow}
+\usepackage{color}
 
 \usepackage{tikz}
 \usetikzlibrary{matrix}
@@ -306,13 +307,16 @@ Theoretical GaAs peaks for which the structure factor is almost 0 are within par
 The obvious best fit for GaAs is the $(1,0,0)$-plane.
 The possible low-intensity peaks for $m=2$, $m=4$ are, if they're even there, lost in the measurement noise.\\
 Sample D fits best with $(1,0,0)$ as well.
-The unexplained peak $\beta_2$ corresponds well with $m=6$,
-where the theoretical structure factor is zero. $m=6$ is at least diminished,
+The unexplained, small peak $\beta_2$ corresponds well with $m=6$,
+where the theoretical structure factor is zero.
+$m=6$ is at least diminished,
 as the peaks do not follow the monotone-decreasing pattern of other plots.
 
 \section{Conclusion}
-
-By Bragg's beard!
+It is a fairly straightforward procedure to determine which sample is which given the very limiting restraints on the problem.
+Had the crystal materials not been limited it would have been a much harder problem. Even as it is, it is not trivial.
+The mystery peak $\beta_2$ could be due to the mentioned diminished (theoretically zero) structure factor, or just from random noise.\\
+$\beta-2\beta$ is a simple yet powerful method for examining the structure of crystal samples.
 
 \begin{thebibliography}{1}
     \bibitem{Kittel}
@@ -320,5 +324,9 @@ By Bragg's beard!
         {\em Introduction to Solid State Physics 8th Edition},
         2005.
 \end{thebibliography}
+
+
+\definecolor{braggred}{rgb}{1.00, 1.00, 1.00}
+\textcolor{braggred}{By Bragg's beard!}
 
 \end{document}
