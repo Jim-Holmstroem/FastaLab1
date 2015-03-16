@@ -94,6 +94,7 @@ The structure factor sums can then be expressed using the fcc structure factor a
     &= \left( f_{Na} + f_{Cl}(-1)^{h} \right) \cdot S^{fcc}_{\bold{G}}
 \end{align}\label{naclstructure}
 With $f_{Na}=11$ and $f_{Cl}=17$ the structure factor will only be $0$ when the fcc part is $0$.
+
 \subsubsection{Si}
 Silicon is monoatomic with two atoms in the conventional cell, at $(0,0,0)$ and at $a(\frac{1}{4},\frac{1}{4},\frac{1}{4})$.
 The structure factor becomes
@@ -214,11 +215,12 @@ the integer triple $(h,k,l)=m\cdot (1,1,1)$ for integers $m$.
 
 With $\lambda$ in equation \eqref{eq:braggs} known, the equation can be rearranged to find expected angles for the a crystal.
 \begin{align}
-\theta&=sin^{-1}\left( \frac{\lambda}{2a} \sqrt{h^2+k^2+l^2}\right)\nonumber\\
-&=sin^{-1}\left( \frac{sqrt{3}\lambda}{2a} \cdot m\right)\nonumber
+\label{eq:braggangle}
+\theta&=sin^{-1}\left( \frac{\lambda}{2a} \sqrt{h^2+k^2+l^2}\right)\\
+&=sin^{-1}\left( \frac{\sqrt{3}\lambda}{2a} \cdot m\right)\nonumber
 \end{align}
-Which of these angles are allowed depend on the structure factor of the sample.
-For InP the structure factor is always nonzero along thing plane - $h,k,l$ always have the same parity.
+Which of these angles give peaks depend on the structure factor of the sample.
+For InP the structure factor is always nonzero along this plane - $h,k,l$ always have the same parity.
 The structure factor of Si disappears when $h+k+l\equiv_4 2$, which happens for $m=2,6,10,...$.
 The expected angles are compared to the experimental measurements in the table below.
 
@@ -238,7 +240,36 @@ The expected angles are compared to the experimental measurements in the table b
 	\hline
 \end{tabular}
 
+The $m=1,3,4,5$ peaks of Si fit very neatly with the experimental data, while the InP peaks fit much poorly.
+Nothing is visible in the data near InP:s $m=2$-peak.
+Sample A is cleary Si.
+
 \subsection{Determining the crystal plane of sample B}
+
+Given the material and the wavelength, we can investigate along which plane the crystal was cut.
+The crystal is cut along $(1,0,0)$, $(1,1,0)$ or $(1,1,1)$, of which the $(h,k,l)$-vectors are multiples.
+giving three different sequences of $h,k,l$-triples allowed by the structure factor.
+For example, the $(1,1,0)$-plane gives $\sqrt{h^2+k^2+l^2}=\sqrt{2},\sqrt{4},\sqrt{6}$ et cetera.
+The first angles for which the structure factor is nonzero are plotted below.
+Theoretical peaks for which the structure factor is almost 0 are within parantheses.
+
+\begin{tabular}{ |c|c|c|c|c|c|c|c| }
+    \hline
+    \multicolumn{2}{|c|}{$\theta_{obs}$}
+	& \multicolumn{2}{|c|}{$(m,0,0)$}
+	& \multicolumn{2}{|c|}{$(m,m,0)$}
+	& \multicolumn{2}{|c|}{$(m,m,m)$}\\
+    \hline
+	\multicolumn{2}{|c|}{Angle}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
+	\hline
+    $\beta_1$	& 14.7\degree	& (2)	& 7.173\degree & 2	& 10.17\degree & 1	& 6.208\degree	\\
+    $\beta_2$	& 30.2\degree	& 4		& 14.46\degree & 4	& 20.68\degree & (2)	& 12.49\degree	\\
+    -			& -				& (6)	& 22.00\degree & 6	& 32.00\degree & 3	& 18.93\degree	\\
+    -			& -				& 8		& 29.96\degree & 8	& 44.94\degree & 4	& 25.63\degree	\\
+	\hline
+\end{tabular}
+
+The best fit is the $(1,0,0)$-plane. The possible low-intensity peaks for $m=2$, $m=4$ are lost in the measurement noise.
 
 \subsection{Determining the crystal plane of sample C}
 
