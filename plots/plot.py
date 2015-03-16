@@ -129,10 +129,10 @@ def peaks(name, data):
         ax.text(
             peak,
             1.01*ax.axis()[3],
-            r'$\beta={}$\u00B0'.format(peak),
+            r'${}$\u00B0'.format(peak),
             horizontalalignment='center',
             verticalalignment='bottom',
-            fontsize='x-small',
+            fontsize='small',
         )
         ax.axvline(peak)
 
