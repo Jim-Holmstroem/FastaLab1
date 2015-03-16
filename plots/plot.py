@@ -138,7 +138,7 @@ def peaks(name, data):
 
     map(line, postprocessed_peaks)
 
-    save(ax, '{name}_peaks'.format(name=name))
+    save(ax, '{name}peaks'.format(name=name))
 
 
 def ordinary(name, data):
