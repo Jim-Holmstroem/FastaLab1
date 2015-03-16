@@ -54,8 +54,8 @@ We can describe the reflection of an X-ray beam by treating it as specular (mirr
     2 \cdot d(hkl) \cdot sin( \theta ) = \lambda
 \end{equation}
 
-$d(hkl)$ is the distance between parallel lattice planes of the configuration $(hkl)$
-characterizing the reciprocal lattice vector $\bold{G}=\frac{2\pi}{a}(h,k,l)$, where $a$ is the lattice constant.
+$d(hkl)$ is the distance between parallel lattice planes of the configuration $(h,k,l)\in \left(2 \mathbb{Z}\right)^3$
+characterizing the reciprocal lattice vector $\bold{G}=\frac{2\pi}{a}(h,k,l)$. $a$ is here the lattice constant - a material parameter.
 $d(hkl)$ can be shown to be equal to $\frac{2\pi}{\abs{\bold{G}}} = \frac{2\pi}{a}\sqrt{h^2+k^2+l^2}$.
 In this laboratory we use a $\beta-2\beta$ scan, also known as coupled mode.
 The incident beam hits the sample at an angle $\beta$, which is the same as the angle of the reflecting beam.
@@ -81,17 +81,16 @@ A great limitation is furthermore that in coupled mode, only beams reflected off
 
 A Leybold Didactic diffractometer (no. 554 811) was used in this laboratory. The measurements were all made in coupled mode (i.e $\beta-2\beta$ scan). The general settings for the diffractometer were maximum voltage (35 kV), minimum current (1 mA) and minimal step angle (0.1$\degree$). For the NaCl measuremnet, a time step of 1 s and incident angles from 2.5$\degree$ to 30$\degree$ were used. The other samples were measured with a time step of 4 s and incident angles from 2.5$\degree$ to 35$\degree$. The measurement result of the reflected intensity and its corresponding incident angle $\beta$ was automatically recorded during the laboratory. The peaks were thereafter manually detected.
 
-
 \subsection{Structure factors}
-The second condition for a diffraction peak to appear is that the structure factor must be nonzero.
-The structure factor $S_{\bold{G}}$ of a crystal structure can be calculated as below. Here $n$ is the number of atoms in the basic lattice, and atom $j$ is at position $\bold{r}_j$ with atomic form factor $f_j$. The atomic form factors are approximately equal to the atomic number.\\
+The structure factor must be nonzero for a diffraction peak to appear.
+The structure factor $S_{\bold{G}}$ of crystal structures are calculated here using methods given in \cite{Kittel}. Here $n$ is the number of atoms in the basic lattice, and atom $j$ is at position $\bold{r}_j$ with atomic form factor $f_j$. The atomic form factors are approximately equal to the atomic number.\\
 \begin{equation}
-    S_{\bold{G}} = \sum^n_{j=1} f_j e^{-i \left( \bold{r}_j \cdot \bold{G}\right)}
+    S_{\bold{G}} = \sum^n_{j=1} f_j e^{-i \left( \bold{r}_j \cdot \bold{G}\right)}\nonumber
 \end{equation}
 
-Say $\bold{G} = \frac{2\pi}{a}\left( h,k,l \right)$. The structure factor of an fcc lattice with lattice constant $a$ is
+As $\bold{G} = \frac{2\pi}{a}\left( h,k,l \right)$ the structure factor of an fcc lattice with lattice constant $a$ is
 \begin{equation}
-    S^{fcc}_{\bold{G}} = f\cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\right]
+    S^{fcc}_{\bold{G}} = f\cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\right]\nonumber
 \end{equation}
 The fcc structure factor is nonzero if and only if $h$, $k$ and $l$ are all even or all odd.\\
 
@@ -102,9 +101,10 @@ The structure factor sums can then be expressed using the fcc structure factor a
 \begin{align}
     S^{NaCl}_{\bold{G}}
     &= \left( f_{Na} + f_{Cl}e^{2\pi i\cdot \frac{h}{2}} \right) \cdot \left[ 1 + (-1)^{h+k} + (-1)^{k+l} + (-1)^{l+h}\right]\nonumber\\
-    &= \left( f_{Na} + f_{Cl}(-1)^{h} \right) \cdot S^{fcc}_{\bold{G}}
-\end{align}\label{naclstructure}
-With $f_{Na}=11$ and $f_{Cl}=17$ the structure factor will only be $0$ when the fcc part is $0$.
+    &= \left( f_{Na} + f_{Cl}(-1)^{h} \right) \cdot S^{fcc}_{\bold{G}}\nonumber
+\end{align}
+Taking $f_{Na}=11$ and $f_{Cl}=17$ - the atomic numbers - the structure factor will only be $0$ when the fcc part is $S^{fcc}_{\bold{G}}=0$.\\
+NaCl has lattice parameter $5.63$ Å.
 
 \subsubsection{Si}
 Silicon is monoatomic with two atoms in the conventional cell, at $(0,0,0)$ and at $a(\frac{1}{4},\frac{1}{4},\frac{1}{4})$.
@@ -113,23 +113,27 @@ The structure factor becomes
 \begin{equation}
     \label{eq:sistructure}
     S^{Si}_{\bold{G}}
-    = f_{Si}\cdot \left( 1 + e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}
+    = f_{Si}\cdot \left( 1 + e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}\nonumber
 \end{equation}
 
-\textbf{GaAs and InP}\\
-The other two crystals in this lab both have a zincblende structure with two different atomic factors , say $f_\alpha,f_\beta$.
-The $\alpha$-atoms are in an fcc structure starting at the origin and the $\beta$-atoms are displaced by $\frac{1}{4}\frac{1}{4}\frac{1}{4}$, again in a cubic fcc structure.
+This structure factor is $0$ whenever $S^{fcc}_{\bold{G}}=0$. It also disappers when $h+k+l\equiv_4 2$, as this makes $\left( 1 + e^{\pi i \frac{h+k+l}{2}} \right)=0$.\\
+Si has lattice parameter $5.43$ Å.
+
+\subsubsection{InP and GaAs}
+The remaining two crystals in this lab both have a zincblende structure with two atomic factors, $f_\alpha$ and $f_\beta$.
+The $\alpha$-atoms are in an fcc structure starting at the origin and the $\beta$-atoms are displaced by $a(\frac{1}{4},\frac{1}{4},\frac{1}{4})$, again in a cubic fcc structure.
 The structure factor becomes
 
 \begin{equation}
     \label{eq:zincblendestructure}
     S^{\alpha\beta}_{\bold{G}}
-    = \left( f_\alpha + f_\beta e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}
+    = \left( f_\alpha + f_\beta e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}\nonumber
 \end{equation}
 
 The atomic form factors are $f_{Ga}=31$, $f_{As}=33$, $f_{In}=49$ and $f_{P}=15$.
-The structure factor for InP is only zero if and only if the fcc structure factor is zero.
-The same goes for GaAs, except when $h+k+l\equiv_4 2$ the structure factor becomes small which might affect the diffraction peaks.
+The structure factor for InP is only zero if and only if the fcc structure factor is zero, because the atomic form factors as very different.
+The structure factor for GaAs is also 0 in that case. However, the structure factor becomes small when $h+k+l\equiv_4 2$.The atomic formfactors are near equal so GaAs is expected to have a small structure factor when $S_\bold{G}^{Si}=0$.\\
+The lattice parameters of InP and GaAs are $5.87$ Å and $5.65$ Å.
 
 \section{Measurements results}
 \plot{A}{Description A}
@@ -191,7 +195,7 @@ The same goes for GaAs, except when $h+k+l\equiv_4 2$ the structure factor becom
 
 \section{Discussion of the results}
 \subsection{Finding the X-ray wavelength from the NaCl diffraction pattern}
-The crystal surface is cut parallel to the $(1,0,0)$ lattice plane.
+The crystal surface is cut parallel to the $100$ lattice plane.
 In coupled mode the $hkl$-vectors will be integer multiples of this Miller index.
 $\bold{G}=\frac{2\pi}{a}(m,0,0)$ where $m$ is an integer.
 The structure factor for NaCl is nonzero when $h,k,l$ are all even or all odd.
@@ -221,7 +225,7 @@ Given the X-ray wavelength, equation \eqref{braggs} can be used to find the expe
 
 \subsection{Determining the materials of sample A and D}
 
-As the crystal samples A and D are cut with Miller index $(1,1,1)$,
+As the crystal samples A and D are cut with Miller index $111$,
 the integer triple $(h,k,l)=m\cdot (1,1,1)$ for integers $m$.
 
 With $\lambda$ in equation \eqref{eq:braggs} known, the equation can be rearranged to find expected angles for the a crystal.
@@ -261,8 +265,8 @@ Sample B fits with InP and GaAs, but better with InP. The peak at $\beta_2$ woul
 \subsection{Determining the crystal planes of samples B and C}
 
 Given the material and the wavelength, one can investigate along which plane a crystal was cut.
-These diamond/zincblende crystals must be cut along planes with Miller indices $(1,0,0)$, $(1,1,0)$ or $(1,1,1)$, of which the $(h,k,l)$-vectors then are multiples.
-For example, the $(1,1,0)$-plane gives $\sqrt{h^2+k^2+l^2}=\sqrt{2},\sqrt{4},\sqrt{6}$ et cetera.
+These diamond/zincblende crystals must be cut along planes with Miller indices $100$, $110$ or $111$, of which the $hkl$-triples then are multiples.
+For example, the $110$-plane gives $\sqrt{h^2+k^2+l^2}=\sqrt{2},\sqrt{4},\sqrt{6}$ et cetera.
 
 The first angles for which the structure factor is nonzero are plotted below for each crystal.
 Theoretical GaAs peaks for which the structure factor is almost 0 are within parantheses.
@@ -272,9 +276,9 @@ Theoretical GaAs peaks for which the structure factor is almost 0 are within par
     \multicolumn{8}{|c|}{GaAs}\\
     \hline
     \multicolumn{2}{|c|}{$\theta_{obs}$}
-	& \multicolumn{2}{|c|}{$(m,0,0)$}
-	& \multicolumn{2}{|c|}{$(m,m,0)$}
-	& \multicolumn{2}{|c|}{$(m,m,m)$}\\
+	& \multicolumn{2}{|c|}{$100$}
+	& \multicolumn{2}{|c|}{$110$}
+	& \multicolumn{2}{|c|}{$111$}\\
     \hline
 	\multicolumn{2}{|c|}{Sample B}& $m$ & $\theta$ & $m$ & $\theta$ & $m$ & $\theta$ \\
 	\hline
@@ -304,9 +308,9 @@ Theoretical GaAs peaks for which the structure factor is almost 0 are within par
 	\hline
 \end{tabular}
 
-The obvious best fit for GaAs is the $(1,0,0)$-plane.
+The obvious best fit for GaAs is the $100$-plane.
 The possible low-intensity peaks for $m=2$, $m=4$ are, if they're even there, lost in the measurement noise.\\
-Sample D fits best with $(1,0,0)$ as well.
+Sample D fits best with $100$ as well.
 The unexplained, small peak $\beta_2$ corresponds well with $m=6$,
 where the theoretical structure factor is zero.
 $m=6$ is at least diminished,
