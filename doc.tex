@@ -179,7 +179,7 @@ The same goes for GaAs, except when $h+k+l\equiv_4 2$ the structure factor becom
 
 \section{Discussion of the results}
 \subsection{Finding the X-ray wavelength from the NaCl diffraction pattern}
-The crystal surface is cut parallel to the (1,0,0) lattice plane.
+The crystal surface is cut parallel to the $(1,0,0)$ lattice plane.
 In coupled mode the $hkl$-vectors will be integer multiples of this Miller index.
 $\bold{G}=\frac{2\pi}{a}(m,0,0)$ where $m$ is an integer.
 The structure factor for NaCl is nonzero when $h,k,l$ are all even or all odd.
@@ -208,7 +208,36 @@ Inputting the measured peak angles gives the following values for $\lambda$:\\
 Given the X-ray wavelength, equation \eqref{braggs} can be used to find the expected angles for different materials and crystal cuts.
 
 \subsection{Determining the material of sample A}
- 
+
+As the crystal sample A is cut with Miller index $(1,1,1)$,
+the integer triple $(h,k,l)=m\cdot (1,1,1)$ for integers $m$.
+
+With $\lambda$ in equation \eqref{eq:braggs} known, the equation can be rearranged to find expected angles for the a crystal.
+\begin{align}
+\theta&=sin^{-1}\left( \frac{\lambda}{2a} \sqrt{h^2+k^2+l^2}\right)\nonumber\\
+&=sin^{-1}\left( \frac{sqrt{3}\lambda}{2a} \cdot m\right)\nonumber
+\end{align}
+Which of these angles are allowed depend on the structure factor of the sample.
+For InP the structure factor is always nonzero along thing plane - $h,k,l$ always have the same parity.
+The structure factor of Si disappears when $h+k+l\equiv_4 2$, which happens for $m=2,6,10,...$.
+The expected angles are compared to the experimental measurements in the table below.
+
+\begin{tabular}{ |l|l|l|l|l|l| }
+    \hline
+    \multicolumn{2}{|c|}{$\theta_{obs}$}
+	& \multicolumn{2}{|c|}{InP}
+	& \multicolumn{2}{|c|}{Si}\\
+    \hline
+	\multicolumn{2}{|c|}{Angle}& $m$ & $\theta$ & $m$ & $\theta$ \\
+	\hline
+    $\beta_1$	& 6.5\degree	& 1 & 5.9745\degree & 1	& 6.4606\degree	\\
+    $\beta_2$	& 19.8\degree	& 2 & 12.015\degree & 3	& 19.728\degree	\\
+    $\beta_3$	& 26.9\degree	& 3 & 18.195\degree & 4	& 26.749\degree	\\
+    $\beta_4$	& 34.4\degree	& 4 & 24.604\degree & 5	& 34.236\degree	\\
+    -			& -				& 5 & 31.361\degree & 7	& 51.965\degree	\\
+	\hline
+\end{tabular}
+
 \subsection{Determining the crystal plane of sample B}
 
 \subsection{Determining the crystal plane of sample C}
