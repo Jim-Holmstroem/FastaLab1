@@ -73,8 +73,8 @@ amplitude $F$ is theoretically found to be
 \end{equation}
 
 When the scattering vector equals a particular reciprocal lattice vector, $\bold{q} = \bold{G}$, the intensity of the reflection will peak in the diffractogram if the structure factor allows it.
-This occurs since when $\bold{q}$ differs significally from $\bold{G}$, $F$ will becomes negligibly small.
-In coupled mode the scattering vector will be normal to the crystal plane, and thus a multiple of the Miller index. 
+This occurs since when $\bold{q}$ differs significantly from $\bold{G}$, $F$ will becomes negligibly small.
+In coupled mode the scattering vector will be normal to the crystal plane, and thus a multiple of the Miller index.
 The possible $\bold{G}$-vectors are integer multiples of the Miller index.\\
 
 
@@ -87,12 +87,17 @@ In short, the locus of scattering vectors in reciprocal space is a line segment 
 
 
 A Leybold Didactic diffractometer (no. 554 811) was used in this laboratory.
-The measurements were all made in coupled mode (i.e $\beta-2\beta$ scan).
+The measurements were all made in coupled mode (i.e. $\beta-2\beta$ scan).
 The default settings for the diffractometer were a voltage of 35 kV (maximal), a current of 1 mA (minimal) and a step angle of 0.1$\degree$ (minimal).
-For the NaCl measuremnet, a time step of 1 s and incident angles from 2.5$\degree$ to 30$\degree$ were used.
+For the NaCl measurement, a time step of 1 s and incident angles from 2.5$\degree$ to 30$\degree$ were used.
 The other samples were measured with a time step of 4 s and incident angles from 2.5$\degree$ to 35$\degree$.
 The measurement result of the reflected intensity (number of photons hitting the GM-counter per second) and its corresponding incident angle $\beta$ was automatically recorded during the laboratory.
-The peaks were thereafter manually detected by searching for distinct local maxima. The first maximum of the plots - with a broader peak - come from the bremsstrahlung and do not concern this experiment. These peaks are therefore omitted from the tables of identified peaks.
+The peaks were thereafter semi-automatically detected by a peak detector
+heuristic commonly used for peak detection in mass
+spectroscopy\cite{peakdetection}, then the spuriously detected peaks was
+then manually excluded when used for calculations and such.
+Directly one can observe that the first maximum of the plots - with a much broader peak - come from the bremsstrahlung and do not concern this experiment.
+These peaks are therefore omitted from the tables of identified peaks.
 
 
 \subsection{Structure factors}
@@ -118,7 +123,8 @@ The structure factor sums can then be expressed using the fcc structure factor a
     &= \left( f_{Na} + f_{Cl}(-1)^{h} \right) \cdot S^{fcc}_{\bold{G}}\nonumber
 \end{align}
 Taking $f_{Na}=11$ and $f_{Cl}=17$ - the atomic numbers - the structure factor will only be $0$ when the fcc part is $S^{fcc}_{\bold{G}}=0$.
-However, as the reflected radiation intensity is proportional to the structure factor, a small struture factor indicates smaller intensities.
+However, as the reflected radiation intensity is proportional to the structure
+factor, a small structure factor indicates smaller intensities.
 When the sign of the $f_Cl$-term is negative the structure factor becomes smaller than for positive sign.\\
 NaCl has lattice parameter $5.63$ Å.
 
@@ -132,11 +138,11 @@ The structure factor becomes
     = f_{Si}\cdot \left( 1 + e^{\pi i \frac{h+k+l}{2}} \right) \cdot S^{fcc}_{\bold{G}}\nonumber
 \end{equation}
 
-This structure factor is $0$ whenever $S^{fcc}_{\bold{G}}=0$. It also disappers when $h+k+l\equiv_4 2$ as this makes $\left( 1 + e^{\pi i \frac{h+k+l}{2}} \right)=0$.\\
+This structure factor is $0$ whenever $S^{fcc}_{\bold{G}}=0$. It also disappears when $h+k+l\equiv_4 2$ as this makes $\left( 1 + e^{\pi i \frac{h+k+l}{2}} \right)=0$.\\
 Si has lattice parameter $5.43$ Å.
 
 \subsubsection{InP and GaAs}
-The remaining two crystals in this lab both have a zincblende structure with two atomic factors, $f_\alpha$ and $f_\beta$.
+The remaining two crystals in this lab both have a zinc blende structure with two atomic factors, $f_\alpha$ and $f_\beta$.
 The $\alpha$-atoms are in an fcc structure starting at the origin and the $\beta$-atoms are displaced by $a(\frac{1}{4},\frac{1}{4},\frac{1}{4})$, again in a cubic fcc structure.
 The structure factor becomes
 
@@ -153,11 +159,12 @@ The lattice parameters of InP and GaAs are $5.87$ Å and $5.65$ Å.
 
 \section{Measurements results}
 
-\plot{NaClpeaks}{Diffractogram with $\beta-2\beta$ scan of sample NaCl with automatically extracted peaks (not all are considered diffraction peaks) and their corresponding values.}
-\plot{Apeaks}{Diffractogram with $\beta-2\beta$ scan of sample A with automatically extracted peaks (not all are considered diffraction peaks) and their corresponding values.}
-\plot{Bpeaks}{Diffractogram with $\beta-2\beta$ scan of sample B with automatically extracted peaks (not all are considered diffraction peaks) and their corresponding values.}
-\plot{Cpeaks}{Diffractogram with $\beta-2\beta$ scan of sample C with automatically extracted peaks (not all are considered diffraction peaks) and their corresponding values.}
-\plot{Dpeaks}{Diffractogram with $\beta-2\beta$ scan of sample D with automatically extracted peaks (not all are considered diffraction peaks) and their corresponding values.}
+\plot{NaClpeaks}{Diffractogram with $\beta-2\beta$ scan of sample NaCl with
+automatically extracted peaks\cite{peakdetection} (not all are considered diffraction peaks) and their corresponding values.}
+\plot{Apeaks}{Diffractogram with $\beta-2\beta$ scan of sample A with automatically extracted peaks \cite{peakdetection}(not all are considered diffraction peaks) and their corresponding values.}
+\plot{Bpeaks}{Diffractogram with $\beta-2\beta$ scan of sample B with automatically extracted peaks \cite{peakdetection}(not all are considered diffraction peaks) and their corresponding values.}
+\plot{Cpeaks}{Diffractogram with $\beta-2\beta$ scan of sample C with automatically extracted peaks \cite{peakdetection}(not all are considered diffraction peaks) and their corresponding values.}
+\plot{Dpeaks}{Diffractogram with $\beta-2\beta$ scan of sample D with automatically extracted peaks \cite{peakdetection}(not all are considered diffraction peaks) and their corresponding values.}
 
 \begin{center}
 \begin{tabular}{ |l||l|l|l|l|l| }
@@ -242,17 +249,18 @@ The expected angles for our hypothetical sample materials are compared to the ex
 
 The $m=1,3,4,5$ peaks of Si fit very neatly with the experimental data for sample A, while the InP peaks fit poorly.
 Nothing is visible in the sample A data near InP:s $m=2$-peak.
-Sample A is cleary Si.\\
-Sample B fits with InP and GaAs, but better with InP. The peak at $\beta_2$ would be diminished if it was a GaAs sample, as the structure factor would be very low. 
+Sample A is clearly Si.\\
+Sample B fits with InP and GaAs, but better with InP. The peak at $\beta_2$ would be diminished if it was a GaAs sample, as the structure factor would be very low.
 
 \subsection{Determining the crystal planes of samples B and C}
 
 Given the material and the wavelength, one can investigate along which plane a crystal was cut.
-These diamond/zincblende crystals must be cut along planes with Miller indices $100$, $110$ or $111$, of which the $hkl$-triples then are multiples.
+These diamond/zinc blende crystals must be cut along planes with Miller indices $100$, $110$ or $111$, of which the $hkl$-triples then are multiples.
 For example, the $110$-plane gives $\sqrt{h^2+k^2+l^2}=\sqrt{2},\sqrt{4},\sqrt{6}$ et cetera.
 
 The first angles for which the structure factor is nonzero are plotted below for each crystal.
-Theoretical GaAs peaks for which the structure factor is almost 0 are within parantheses.
+Theoretical GaAs peaks for which the structure factor is almost 0 are within
+parenthesis.
 
 \begin{tabular}{ |c|c|c|c|c|c|c|c| }
 	\hline
@@ -310,6 +318,11 @@ $\beta-2\beta$ is a simple yet powerful method for examining the structure of cr
         Charles Kittel,
         {\em Introduction to Solid State Physics 8th Edition},
         2005.
+    \bibitem{peakdetection}
+        Pan Du, Warren A. Kibbe and Simon M. Lin,
+        {\em Improved peak detection in mass spectrum by incorporating
+        continuous wavelet transform-based pattern matching},
+        2006.
 \end{thebibliography}
 
 
